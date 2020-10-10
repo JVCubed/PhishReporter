@@ -21,14 +21,16 @@
   <Description DefaultValue="PhishReporter add-in to report phishing"/>
   <IconUrl DefaultValue="~remoteAppUrl/Images/icon64.png"/>
 
-  <SupportUrl DefaultValue="https://github.com/JVCubed/Phising-reporter" />
-  <!-- Domains that will be allowed when navigating. For example, if you use ShowTaskpane and then have an href link, navigation will only be allowed if the domain is on this list.
+  <SupportUrl DefaultValue="https://github.com/JVCubed/PhishReporter" />
+  <!-- Domains that will be allowed when navigating. For example, if you use ShowTaskpane and then have an href link, navigation will only be allowed if the domain is on this list. -->
+  <!--
   <AppDomains>
     <AppDomain>AppDomain1</AppDomain>
     <AppDomain>AppDomain2</AppDomain>
     <AppDomain>AppDomain3</AppDomain>
   </AppDomains>
-  End Basic Settings. -->
+  -->
+  <!-- End Basic Settings. -->
   
   <Hosts>
     <Host Name="Mailbox" />
@@ -49,7 +51,7 @@
 
   <Permissions>ReadWriteItem</Permissions>
   <Rule xsi:type="RuleCollection" Mode="Or">
-    <Rule xsi:type="ItemIs" ItemType="Message" FormType="ReadOrEdit" />
+    <Rule xsi:type="ItemIs" ItemType="Message" FormType="Read" />
   </Rule>
   <DisableEntityHighlighting>false</DisableEntityHighlighting>
   <VersionOverrides xmlns="http://schemas.microsoft.com/office/mailappversionoverrides" xsi:type="VersionOverridesV1_0">
@@ -72,7 +74,7 @@
 					<!-- Up to 6 Groups added per Tab -->
 					<Group id="msgReadGroup">
 						<Label resid="groupLabel" />
-						<!-- Launch the add-in : task pane button -->
+						<!-- Launch the add-in : informational task pane -->
 						<Control xsi:type="Button" id="msgReadOpenPaneButton">
 							<Label resid="paneReadButtonLabel" />
 							<Supertip>
@@ -88,7 +90,7 @@
 								<SourceLocation resid="messageReadTaskPaneUrl" />
 							</Action>
 						</Control>
-
+                        <!-- Launch the add-in : forward the phishing email as attachement.-->
 						<Control xsi:type="Button" id="msgComposeOpenPaneButton">
 							<Label resid="paneComposeButtonLabel" />
 							<Supertip>
@@ -109,7 +111,6 @@
 				</OfficeTab>
 			</ExtensionPoint>
 			
-		    
           <!-- Go to http://aka.ms/ExtensionPointsCommands to learn how to add more Extension Points: MessageRead, AppointmentOrganizer, AppointmentAttendee -->
         </DesktopFormFactor>
       </Host>
@@ -127,16 +128,16 @@
 		<bt:Url id="messageComposeTaskPaneUrl" DefaultValue="~remoteAppUrl/MessageCompose.html"/>
       </bt:Urls>
       <bt:ShortStrings>
-        <bt:String id="groupLabel" DefaultValue="My Add-in Group"/>
+        <bt:String id="groupLabel" DefaultValue="PhishReporter"/>
         <bt:String id="customTabLabel"  DefaultValue="My Add-in Tab"/>
-        <bt:String id="paneReadButtonLabel" DefaultValue="Read mail"/>
-        <bt:String id="paneReadSuperTipTitle" DefaultValue="Get all properties"/>
-		<bt:String id="paneComposeButtonLabel" DefaultValue="Compose mail"/>
-		<bt:String id="paneComposeSuperTipTitle" DefaultValue="Get all properties"/>
+        <bt:String id="paneReadButtonLabel" DefaultValue="How to detect phishing"/>
+        <bt:String id="paneReadSuperTipTitle" DefaultValue="A list about how you can detect phishing."/>
+		<bt:String id="paneComposeButtonLabel" DefaultValue="Report phishing"/>
+		<bt:String id="paneComposeSuperTipTitle" DefaultValue="Forward the phishing email to alert your IT department."/>
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="paneReadSuperTipDescription" DefaultValue="Opens a pane displaying all available properties. This is an example of a button that opens a task pane."/>
-		<bt:String id="paneComposeSuperTipDescription" DefaultValue="Opens a pane displaying all available properties. This is an example of a button that opens a task pane."/>
+        <bt:String id="paneReadSuperTipDescription" DefaultValue="Opens a pane displaying a list about how you can detect phishing."/>
+		<bt:String id="paneComposeSuperTipDescription" DefaultValue="Opens a new message with the phishing attached to inform your IT department."/>
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>

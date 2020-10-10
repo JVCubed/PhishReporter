@@ -29,39 +29,35 @@
     <!-- <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.1.0/fabric.components.min.css" /> -->
 
 </head>
-<body class="ms-font-m ms-welcome">
-    <div class="ms-Fabric content-main">
-        <h1 class="ms-font-xxl">Message properties</h1>
-        <table class="ms-Table ms-Table--selectable">
-            <thead>
-                <tr>
-                    <th>Property</th>
-                    <th>Value</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td><strong>Id</strong></td>
-                    <td class="prop-val"><code><label id="item-id"></label></code></td>
-                </tr>
-                <tr>
-                    <td><strong>Subject</strong></td>
-                    <td class="prop-val"><code><label id="item-subject"></label></code></td>
-                </tr>
-                <tr>
-                    <td><strong>Message Id</strong></td>
-                    <td class="prop-val"><code><label id="item-internetMessageId"></label></code></td>
-                </tr>
-                <tr>
-                    <td><strong>From</strong></td>
-                    <td class="prop-val"><code><label id="item-from"></label></code></td>
-                </tr>
-                <tr>
-                    <td><strong>Debug Message</strong></td>
-                    <td class="prop-val"><code><label id="debug"></label></code></td>
-                </tr>
-            </tbody>
-        </table>
-    </div>
+<body class="ms-font-m ms-welcome ms-Fabric">
+    <header class="ms-welcome__header ms-bgColor-neutralLighter">
+        <img width="90" height="90" src="../../assets/logo-filled.png" alt="Contoso" title="Contoso" />
+        <h1 class="ms-font-su">How to detect phishing</h1>
+    </header>
+    <section id="sideload-msg" class="ms-welcome__main">
+        <h2 class="ms-font-xl">Please sideload your add-in to see app body.</h2>
+    </section>
+    <main id="app-body" class="ms-welcome__main" style="display: none;">
+        <h2 class="ms-font-xl"> Detecting a phishing email! </h2>
+        <ul class="ms-font-xl">
+            <li>Don't trust the display name of who the email is.</li>
+            <li>Look but don't click.</li>
+            <li>Check for spelling errors.</li>
+            <li>Consider the salutation.</li>
+            <li>Is the email asking for personal information?</li>
+            <li>Beware of urgency.</li>
+            <li>Check the email signature.</li>
+            <li>Be carefull with attachments.</li>
+            <li>Don't believe everything you see</li>
+            <li>When in doubt, contact your SOC.</li>
+        </ul>
+        <p><i>source: <a href="https://gallery.logrhythm.com/infographics/detecting-a-phishing-email-infographic-poster.pdf">LogRhythm Labs</a></i></p>
+
+        <p><label id="item-subject"></label></p>
+        <div role="button" id="run" class="ms-welcome__action ms-Button ms-Button--hero ms-font-xl">
+            <span class="ms-Button-label">Run</span>
+        </div>
+
+    </main>
 </body>
 </html>
