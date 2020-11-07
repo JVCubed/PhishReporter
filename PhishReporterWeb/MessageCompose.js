@@ -17,6 +17,8 @@
     var phishSubject;
     var securityTeamMailAddress;
 
+
+    // get the reciepent or ask to enter value
     // check if there is an email address set to send the mail to
     function securityTeamMailAddress() {
         // check if email is already set
@@ -45,6 +47,7 @@
         });
     }
 
+
     // this function has to run before composing a new mail to retrieve the details of the current selected email. 
     function getPhishingItem(item) {
         phishItemId = item.itemId
@@ -56,8 +59,13 @@
         Office.context.mailbox.displayNewMessageForm({
             toRecipients: [securityTeamMailAddress],
             // ccRecipients: ["sam@contoso.com"], Send to more mailaddresses if nessecery
-            subject: Office.context.mailbox.userProfile.displayName + " is reporting phishing!",
-            htmlBody: 'PhishItemId: ' + phishItemId + '<br>MailAddress: ' + securityTeamMailAddress,
+            subject: "Phishing report: \"" + phishSubject  + "\"",
+            htmlBody:
+                'Dear Support,<br/><br/>' +
+                'I recieved attached email and want to report it as phishing.' +
+                '<br/><br/>Please write down any additional information below to line.' +
+                ' e.g. that you\'ve clicked on a link (hopefully not).' +
+                '<br/>--------------------------------------------------',
             attachments: [
                 { type: "item", itemId: phishItemId, name: phishSubject }
             ],
