@@ -20,6 +20,7 @@
   <DisplayName DefaultValue="PhishReporter" />
   <Description DefaultValue="PhishReporter add-in to report phishing"/>
   <IconUrl DefaultValue="~remoteAppUrl/Images/icon64.png"/>
+  <HighResolutionIconUrl DefaultValue="~remoteAppUrl/Images/icon256.png" />
 
   <SupportUrl DefaultValue="https://github.com/JVCubed/PhishReporter" />
   <!-- Domains that will be allowed when navigating. For example, if you use ShowTaskpane and then have an href link, navigation will only be allowed if the domain is on this list. -->
@@ -86,6 +87,7 @@
 								<bt:Image size="32" resid="icon32" />
 								<bt:Image size="64" resid="icon64" />
 								<bt:Image size="80" resid="icon80" />
+							    <bt:Image size="256" resid="icon256" />
 							</Icon>
 							<Action xsi:type="ShowTaskpane">
 								<SourceLocation resid="messageReadTaskPaneUrl" />
@@ -103,6 +105,7 @@
 								<bt:Image size="32" resid="icon32" />
 								<bt:Image size="64" resid="icon64" />
 								<bt:Image size="80" resid="icon80" />
+							    <bt:Image size="256" resid="icon256" />
 							</Icon>
 							<Action xsi:type="ShowTaskpane">
 								<SourceLocation resid="messageComposeTaskPaneUrl" />
@@ -124,6 +127,7 @@
         <bt:Image id="icon32" DefaultValue="~remoteAppUrl/Images/icon32.png"/>
 		<bt:Image id="icon64" DefaultValue="~remoteAppUrl/Images/icon64.png"/>
         <bt:Image id="icon80" DefaultValue="~remoteAppUrl/Images/icon80.png"/>
+	    <bt:Image id="icon256" DefaultValue="~remoteAppUrl/Images/icon256.png"/>
       </bt:Images>
       <bt:Urls>
         <bt:Url id="functionFile" DefaultValue="~remoteAppUrl/Functions/FunctionFile.html"/>
