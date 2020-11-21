@@ -13,7 +13,9 @@
     <!-- <script src="Scripts/Office/1/office.js" type="text/javascript"></script>  -->
 
     <script src="MessageCompose.js" type="text/javascript"></script>
-
+    <script src="Scripts/MessageBanner.js" type="text/javascript"></script>
+    <link href="Content/Button.css" rel="stylesheet" type="text/css" />
+    <link href="Content/MessageBanner.css" rel="stylesheet" type="text/css" />
 
     <!-- For the Office UI Fabric Core, go to https://aka.ms/office-ui-fabric to learn more. -->
     <link rel="stylesheet" href="https://static2.sharepointonline.com/files/fabric/office-ui-fabric-core/9.6.0/css/fabric.min.css">
@@ -24,7 +26,56 @@
     <!-- <link rel="stylesheet" href="https://appsforoffice.microsoft.com/fabric/2.1.0/fabric.components.min.css" /> -->
 
 </head>
-<body>
-    <p>A new display will popup to send the email.</p>
+<body class="ms-font-l ms-welcome">
+
+    <div>
+        <!-- Loading icon -->
+        <p>Here the loading icon will come</p>
+    </div>
+
+    <main class="ms-welcome__main">
+        <h2 class="ms-font-xl"> Detecting a phishing email! </h2>
+        <ul>
+            <li>Don't trust the display name of who the email is.</li>
+            <li>Look but don't click.</li>
+            <li>Check for spelling errors.</li>
+            <li>Consider the salutation.</li>
+            <li>Is the email asking for personal information?</li>
+            <li>Beware of urgency.</li>
+            <li>Check the email signature.</li>
+            <li>Be carefull with attachments.</li>
+            <li>Don't believe everything you see</li>
+            <li>When in doubt, contact your SOC.</li>
+        </ul>
+        <p class="ms-font-m"><i>source: <a href="https://gallery.logrhythm.com/infographics/detecting-a-phishing-email-infographic-poster.pdf">LogRhythm Labs</a></i></p>
+    </main>
+
+    <button id="changeSettings" class="ms-Button" onclick="hideShowSettings();">
+        <div class="ms-Button-label">Change settings</div>
+    </button>
+
+    <div id="settings" style="display: none;">
+        <h1 class="ms-font-xl">Message recipient</h1>
+        <table class="ms-Table ms-Table--selectable">
+            <tbody>
+                <tr>
+                    <td><strong>Current mailaddress</strong></td>
+                    <td class="prop-val"><code><label id="currentMailAddress"></label></code></td>
+                </tr>
+                <tr>
+                    <td><strong>New mailaddress</strong></td>
+                    <td class="prop-val"><code><input type="email" id="newMailAddress" /></code></td>
+                </tr>
+                <tr>
+                    <td>
+                        <button class="ms-Button" type="button" onclick="changeMailAddress();" id="change">
+                            <span class="ms-Button-label">Change</span>
+                        </button>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
 </body>
 </html>
