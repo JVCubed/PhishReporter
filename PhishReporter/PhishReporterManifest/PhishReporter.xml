@@ -113,7 +113,7 @@
       </bt:Images>
       <bt:Urls>
         <bt:Url id="functionFile" DefaultValue="~remoteAppUrl/Functions/FunctionFile.html"/>
-		<bt:Url id="messageComposeTaskPaneUrl" DefaultValue="~remoteAppUrl/MessageCompose.html"/>
+		<bt:Url id="messageComposeTaskPaneUrl" DefaultValue="~remoteAppUrl/Pages/en-US/MessageCompose.html"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="groupLabel" DefaultValue="PhishReporter"/>
