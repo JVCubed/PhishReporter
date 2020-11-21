@@ -13,7 +13,7 @@
   <Id>be87d760-f7c6-47b8-8e72-234f011e70c8</Id>
 
   <!--Version. Updates from the store only get triggered if there is a version change. -->
-  <Version>1.0.0.0</Version>
+  <Version>0.1.0.0</Version>
   <ProviderName>JVCubed Software</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <!-- The display name of your add-in. Used on the store and various places of the Office UI such as the add-ins dialog. -->
@@ -75,24 +75,6 @@
 					<!-- Up to 6 Groups added per Tab -->
 					<Group id="msgReadGroup">
 						<Label resid="groupLabel" />
-						<!-- Launch the add-in : informational task pane -->
-						<Control xsi:type="Button" id="msgReadOpenPaneButton">
-							<Label resid="paneReadButtonLabel" />
-							<Supertip>
-								<Title resid="paneReadSuperTipTitle" />
-								<Description resid="paneReadSuperTipDescription" />
-							</Supertip>
-							<Icon>
-								<bt:Image size="16" resid="icon16" />
-								<bt:Image size="32" resid="icon32" />
-								<bt:Image size="64" resid="icon64" />
-								<bt:Image size="80" resid="icon80" />
-							    <bt:Image size="256" resid="icon256" />
-							</Icon>
-							<Action xsi:type="ShowTaskpane">
-								<SourceLocation resid="messageReadTaskPaneUrl" />
-							</Action>
-						</Control>
                         <!-- Launch the add-in : forward the phishing email as attachement.-->
 						<Control xsi:type="Button" id="msgComposeOpenPaneButton">
 							<Label resid="paneComposeButtonLabel" />
@@ -131,20 +113,16 @@
       </bt:Images>
       <bt:Urls>
         <bt:Url id="functionFile" DefaultValue="~remoteAppUrl/Functions/FunctionFile.html"/>
-        <bt:Url id="messageReadTaskPaneUrl" DefaultValue="~remoteAppUrl/MessageRead.html"/>
 		<bt:Url id="messageComposeTaskPaneUrl" DefaultValue="~remoteAppUrl/MessageCompose.html"/>
       </bt:Urls>
       <bt:ShortStrings>
         <bt:String id="groupLabel" DefaultValue="PhishReporter"/>
         <bt:String id="customTabLabel"  DefaultValue="My Add-in Tab"/>
-        <bt:String id="paneReadButtonLabel" DefaultValue="How to detect phishing"/>
-        <bt:String id="paneReadSuperTipTitle" DefaultValue="A list about how you can detect phishing."/>
 		<bt:String id="paneComposeButtonLabel" DefaultValue="Report phishing"/>
 		<bt:String id="paneComposeSuperTipTitle" DefaultValue="Forward the phishing email to alert your IT department."/>
       </bt:ShortStrings>
       <bt:LongStrings>
-        <bt:String id="paneReadSuperTipDescription" DefaultValue="Opens a pane displaying a list about how you can detect phishing."/>
-		<bt:String id="paneComposeSuperTipDescription" DefaultValue="Opens a new message with the phishing attached to inform your IT department."/>
+        <bt:String id="paneComposeSuperTipDescription" DefaultValue="Opens a new message with the phishing attached to inform your IT department."/>
       </bt:LongStrings>
     </Resources>
   </VersionOverrides>
