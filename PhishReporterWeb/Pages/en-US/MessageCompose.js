@@ -76,7 +76,6 @@
 })();
 
 function hideShowSettings() {
-    console.log(document.getElementById("settings").style.display)
     if (document.getElementById("settings").style.display === "none") {
         document.getElementById("settings").style.display = "block";
     } else {
