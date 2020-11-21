@@ -58,13 +58,13 @@
     function composeMail() {
         Office.context.mailbox.displayNewMessageForm({
             toRecipients: [securityTeamMailAddress],
-            // ccRecipients: ["sam@contoso.com"], Send to more mailaddresses if nessecery
-            subject: "Phishing report: \"" + phishSubject  + "\"",
+            // ccRecipients: ["sam@contoso.com"], Send to more mailaddresses if necessary
+            subject: "Phishing report: \"" + phishSubject + "\"",
             htmlBody:
                 'Dear Support,<br/><br/>' +
-                'I recieved attached email and want to report it as phishing.' +
+                'I received attached email and want to report it as phishing.' +
                 '<br/><br/>Please write down any additional information below to line.' +
-                ' e.g. that you\'ve clicked on a link (hopefully not).' +
+                ' e.g., that you\'ve clicked on a link (hopefully not).' +
                 '<br/>--------------------------------------------------',
             attachments: [
                 { type: "item", itemId: phishItemId, name: phishSubject }
