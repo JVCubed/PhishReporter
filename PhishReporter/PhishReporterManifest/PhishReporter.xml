@@ -13,7 +13,7 @@
   <Id>be87d760-f7c6-47b8-8e72-234f011e70c8</Id>
 
   <!--Version. Updates from the store only get triggered if there is a version change. -->
-  <Version>0.1.0.0</Version>
+  <Version>1.0.0.0</Version>
   <ProviderName>JVCubed Software</ProviderName>
   <DefaultLocale>en-US</DefaultLocale>
   <!-- The display name of your add-in. Used on the store and various places of the Office UI such as the add-ins dialog. -->
