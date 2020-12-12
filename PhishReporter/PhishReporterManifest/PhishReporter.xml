@@ -19,8 +19,8 @@
   <!-- The display name of your add-in. Used on the store and various places of the Office UI such as the add-ins dialog. -->
   <DisplayName DefaultValue="PhishReporter" />
   <Description DefaultValue="PhishReporter add-in to report phishing"/>
-  <IconUrl DefaultValue="~remoteAppUrl/Images/icon64.png"/>
-  <HighResolutionIconUrl DefaultValue="~remoteAppUrl/Images/icon128.png" />
+  <IconUrl DefaultValue="~remoteAppUrl/Images/Icon64.png"/>
+  <HighResolutionIconUrl DefaultValue="~remoteAppUrl/Images/Icon128.png" />
 
   <SupportUrl DefaultValue="https://github.com/JVCubed/PhishReporter" />
   <!-- Domains that will be allowed when navigating. For example, if you use ShowTaskpane and then have an href link, navigation will only be allowed if the domain is on this list. -->
@@ -44,6 +44,7 @@
   <FormSettings>
     <Form xsi:type="ItemRead">
       <DesktopSettings>
+		  <!-- ToDo: Next line URL is dead, but plugin doesn't work without-->
         <SourceLocation DefaultValue="~remoteAppUrl/MessageRead.html"/>
         <RequestedHeight>250</RequestedHeight>
       </DesktopSettings>
@@ -105,11 +106,11 @@
 
     <Resources>
       <bt:Images>
-        <bt:Image id="icon16" DefaultValue="~remoteAppUrl/Images/icon16.png"/>
-        <bt:Image id="icon32" DefaultValue="~remoteAppUrl/Images/icon32.png"/>
-		<bt:Image id="icon64" DefaultValue="~remoteAppUrl/Images/icon64.png"/>
-        <bt:Image id="icon80" DefaultValue="~remoteAppUrl/Images/icon80.png"/>
-	    <bt:Image id="icon128" DefaultValue="~remoteAppUrl/Images/icon128.png"/>
+        <bt:Image id="icon16" DefaultValue="~remoteAppUrl/Images/Icon16.png"/>
+        <bt:Image id="icon32" DefaultValue="~remoteAppUrl/Images/Icon32.png"/>
+		<bt:Image id="icon64" DefaultValue="~remoteAppUrl/Images/Icon64.png"/>
+        <bt:Image id="icon80" DefaultValue="~remoteAppUrl/Images/Icon80.png"/>
+	    <bt:Image id="icon128" DefaultValue="~remoteAppUrl/Images/Icon128.png"/>
       </bt:Images>
       <bt:Urls>
         <bt:Url id="functionFile" DefaultValue="~remoteAppUrl/Functions/FunctionFile.html"/>
