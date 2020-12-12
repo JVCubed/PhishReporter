@@ -1,6 +1,6 @@
 # PhishReporter
 
-This project is in early development. Readme will be updated before public release. Closed beta is available, let me know if your interrested.
+This project is in early development. Readme will be updated before public release. Closed beta is available, let me know if your interested.
 
 PhishReporter is a project to provide a easy and consistant way to report phishing to the required departments. The project is build to be future-proof and is available for at least the following versions of Outlook:
 - Outlook on the web
